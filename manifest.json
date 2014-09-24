@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+
+    "name": "StarFB",
+    "description": "Save your favorite Facebook posts with a simple click!",
+    "version": "1.0",
+
+    "content_scripts": [
+        {
+          "matches": ["http://www.facebook.com/*", "https://www.facebook.com/*"],
+          "js": ["starrer.js"],
+          "run_at": ["document_start"]
+        }
+    ]
+    "browser_action": {
+        "default_icon": "favorite.png",
+        "default_popup": "starList.html"
+    }
+}
+ 
